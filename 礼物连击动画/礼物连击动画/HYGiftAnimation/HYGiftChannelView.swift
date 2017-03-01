@@ -8,6 +8,7 @@
 
 import UIKit
 
+// 定义栈道的状态
 enum ChannelViewState {
     case idle
     case animating
@@ -24,10 +25,14 @@ class HYGiftChannelView: UIView {
     @IBOutlet weak var giftImageView: UIImageView!
     @IBOutlet weak var digitLabel: HYDigitalLabel!
     
+    // 连击数label上当前显示的数字
     fileprivate var currentNumber : Int = 0
-    fileprivate var cacheNumber : Int = 0
-    
-    fileprivate var state : ChannelViewState = .idle
+    // 缓存的数字
+    var cacheNumber : Int = 0
+    // 默认栈道的状态
+    var state : ChannelViewState = .idle
+    // 定义闭包属性
+    var animationFinishedCallBack : ((HYGiftChannelView) -> Void)?
     
     var giftModel : HYGiftModel? {
         didSet {
@@ -49,10 +54,12 @@ class HYGiftChannelView: UIView {
 }
 
 
-// MARK:- 执行动画
+// MARK:- 执行弹出动画
 extension HYGiftChannelView {
     fileprivate func performShowAnimation() {
+        // 切换栈道状态
         state = .animating
+        
         // 执行栈道动画
         UIView.animate(withDuration: 0.25, animations: {
             self.frame.origin.x = 0
@@ -77,7 +84,7 @@ extension HYGiftChannelView {
             if self.cacheNumber > 0 {
                 self.cacheNumber -= 1
                 self.performDigitalAnimation()
-            } else {
+            } else { // 缓存数为0,停留3秒,然后执行结束动画
                 self.perform(#selector(self.performDismissAnimation), with: nil, afterDelay: 3.0)
                 self.state = .waitToEnding
             }
@@ -86,16 +93,20 @@ extension HYGiftChannelView {
     
     // 执行结束动画
     @objc fileprivate func performDismissAnimation() {
+        // 切换栈道状态
         self.state = .ending
         UIView.animate(withDuration: 0.25, animations: {
             self.frame.origin.x = UIScreen.main.bounds.width
             self.alpha = 0.0
-            }) { (_) in
-                self.giftModel = nil
-                self.currentNumber = 0
-                self.digitLabel.alpha = 0
-                self.frame.origin.x = -self.bounds.width
-                self.state = .idle
+        }) { (_) in
+            self.giftModel = nil
+            self.currentNumber = 0
+            self.digitLabel.alpha = 0
+            self.frame.origin.x = -self.bounds.width
+            self.state = .idle
+            
+            // 通知containerView已经完成了动画
+            self.animationFinishedCallBack?(self)
         }
     }
 }
@@ -125,7 +136,7 @@ extension HYGiftChannelView {
         if state == .animating {
             cacheNumber += 1
         } else if state == .waitToEnding {
-            NSObject.cancelPreviousPerformRequests(withTarget: self)
+            NSObject.cancelPreviousPerformRequests(withTarget: self) // 删除后面的任务
             performDigitalAnimation()
         }
     }

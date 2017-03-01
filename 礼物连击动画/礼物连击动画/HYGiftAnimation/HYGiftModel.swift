@@ -20,4 +20,18 @@ class HYGiftModel : NSObject {
         self.giftIcon = giftIcon
         self.giftName = giftName
     }
+    
+    override func isEqual(_ object: Any?) -> Bool {
+        // 1. 将object转成HYGiftModel
+        guard let object = object as? HYGiftModel else {
+            return false
+        }
+        
+        // 2. 比较senderName/giftName
+        if object.senderName == senderName && object.giftName == giftName {
+            return true
+        }
+        
+        return false
+    }
 }

@@ -16,6 +16,7 @@
 		2B28C2EB1E66A69E003BCC2F /* HYGiftChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B28C2E91E66A69E003BCC2F /* HYGiftChannelView.swift */; };
 		2B28C2EC1E66A69E003BCC2F /* HYGiftChannelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B28C2EA1E66A69E003BCC2F /* HYGiftChannelView.xib */; };
 		2B28C2EE1E66A843003BCC2F /* HYGiftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B28C2ED1E66A843003BCC2F /* HYGiftModel.swift */; };
+		2B28C2F01E66E504003BCC2F /* HYGiftContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B28C2EF1E66E504003BCC2F /* HYGiftContainerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		2B28C2E91E66A69E003BCC2F /* HYGiftChannelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYGiftChannelView.swift; sourceTree = "<group>"; };
 		2B28C2EA1E66A69E003BCC2F /* HYGiftChannelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYGiftChannelView.xib; sourceTree = "<group>"; };
 		2B28C2ED1E66A843003BCC2F /* HYGiftModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYGiftModel.swift; sourceTree = "<group>"; };
+		2B28C2EF1E66E504003BCC2F /* HYGiftContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYGiftContainerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		2B28C2E61E669F5D003BCC2F /* HYGiftAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				2B28C2EF1E66E504003BCC2F /* HYGiftContainerView.swift */,
 				2B28C2ED1E66A843003BCC2F /* HYGiftModel.swift */,
 				2B28C2E91E66A69E003BCC2F /* HYGiftChannelView.swift */,
 				2B28C2EA1E66A69E003BCC2F /* HYGiftChannelView.xib */,
@@ -159,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B28C2D71E669D8E003BCC2F /* ViewController.swift in Sources */,
+				2B28C2F01E66E504003BCC2F /* HYGiftContainerView.swift in Sources */,
 				2B28C2EB1E66A69E003BCC2F /* HYGiftChannelView.swift in Sources */,
 				2B28C2D51E669D8E003BCC2F /* AppDelegate.swift in Sources */,
 				2B28C2EE1E66A843003BCC2F /* HYGiftModel.swift in Sources */,
