@@ -13,6 +13,9 @@
 		2B28C2DC1E669D8E003BCC2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B28C2DB1E669D8E003BCC2F /* Assets.xcassets */; };
 		2B28C2DF1E669D8E003BCC2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B28C2DD1E669D8E003BCC2F /* LaunchScreen.storyboard */; };
 		2B28C2E81E669FA2003BCC2F /* HYDigitalLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B28C2E71E669FA2003BCC2F /* HYDigitalLabel.swift */; };
+		2B28C2EB1E66A69E003BCC2F /* HYGiftChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B28C2E91E66A69E003BCC2F /* HYGiftChannelView.swift */; };
+		2B28C2EC1E66A69E003BCC2F /* HYGiftChannelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B28C2EA1E66A69E003BCC2F /* HYGiftChannelView.xib */; };
+		2B28C2EE1E66A843003BCC2F /* HYGiftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B28C2ED1E66A843003BCC2F /* HYGiftModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		2B28C2DE1E669D8E003BCC2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B28C2E01E669D8E003BCC2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B28C2E71E669FA2003BCC2F /* HYDigitalLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYDigitalLabel.swift; sourceTree = "<group>"; };
+		2B28C2E91E66A69E003BCC2F /* HYGiftChannelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYGiftChannelView.swift; sourceTree = "<group>"; };
+		2B28C2EA1E66A69E003BCC2F /* HYGiftChannelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYGiftChannelView.xib; sourceTree = "<group>"; };
+		2B28C2ED1E66A843003BCC2F /* HYGiftModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYGiftModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,9 @@
 		2B28C2E61E669F5D003BCC2F /* HYGiftAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				2B28C2ED1E66A843003BCC2F /* HYGiftModel.swift */,
+				2B28C2E91E66A69E003BCC2F /* HYGiftChannelView.swift */,
+				2B28C2EA1E66A69E003BCC2F /* HYGiftChannelView.xib */,
 				2B28C2E71E669FA2003BCC2F /* HYDigitalLabel.swift */,
 			);
 			path = HYGiftAnimation;
@@ -136,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B28C2DF1E669D8E003BCC2F /* LaunchScreen.storyboard in Resources */,
+				2B28C2EC1E66A69E003BCC2F /* HYGiftChannelView.xib in Resources */,
 				2B28C2DC1E669D8E003BCC2F /* Assets.xcassets in Resources */,
 				2B28C2DA1E669D8E003BCC2F /* Main.storyboard in Resources */,
 			);
@@ -149,7 +159,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B28C2D71E669D8E003BCC2F /* ViewController.swift in Sources */,
+				2B28C2EB1E66A69E003BCC2F /* HYGiftChannelView.swift in Sources */,
 				2B28C2D51E669D8E003BCC2F /* AppDelegate.swift in Sources */,
+				2B28C2EE1E66A843003BCC2F /* HYGiftModel.swift in Sources */,
 				2B28C2E81E669FA2003BCC2F /* HYDigitalLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
